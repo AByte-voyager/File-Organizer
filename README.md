@@ -53,4 +53,23 @@ A Bash wrapper script:
 - Appends log entries with real system time.
 - Optionally deletes the backup if everything succeeds.
 
+## 🧰 Requirements
+
+- Python 3.7+
+- SQLite3 (bundled with Python)
+- Bash Shell (Linux/macOS/WSL)
+
+> No third-party packages needed
+
+##  Usage
+
+The `organize_log.sh` Bash script automates the entire process of organizing files, handling subdirectory deletion, and tracking logs/database entries.
+
+### ✅ To use the script:
+
+**Execute the Bash script** with one or more folder paths as arguments:
+
+```bash
+./organize_log.sh /path/to/folder1 /path/to/folder2 ... /path/to/folderN
+
 ---
