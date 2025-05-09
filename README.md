@@ -2,7 +2,6 @@
 
 This project is a **hybrid Python and Bash tool** that automatically organizes files in a given directory by **file type** and **modification year**, while keeping track of every operation through both a human-readable log file and a structured SQLite database. It also provides optional cleanup of old folders, safe conflict handling, and system-level backup control—all done transparently with minimal user input.
 
----
 
 ## 🎯 Purpose
 
@@ -14,7 +13,6 @@ Over time, folders like *Downloads*, *Documents*, or *Shared Drives* get clutter
 - Prevent accidental overwrites through conflict resolution.
 - Empower users with both file-level logs and database-level records.
 
----
 
 ## 🛠️ How It Works
 
@@ -63,13 +61,13 @@ A Bash wrapper script:
 
 ##  Usage
 
-The `organize_log.sh` Bash script automates the entire process of organizing files, handling subdirectory deletion, and tracking logs/database entries.
+The `file_organizer` Bash script automates the entire process of organizing files, handling subdirectory deletion, and tracking logs/database entries.
 
 ### ✅ To use the script:
 
 **Execute the Bash script** with one or more folder paths as arguments:
 
 ```bash
-./organize_log.sh /path/to/folder1 /path/to/folder2 ... /path/to/folderN
+./file_organizer /path/to/folder1 /path/to/folder2 ... /path/to/folderN
 
----
+
