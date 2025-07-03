@@ -1,9 +1,9 @@
-# 🗃️ File Organizer with Logging and SQLite Tracking
+# File Organizer with Logging and SQLite Tracking
 
 This project is a **hybrid Python and Bash tool** that automatically organizes files in a given directory by **file type** and **modification year**, while keeping track of every operation through both a human-readable log file and a structured SQLite database. It also provides optional cleanup of old folders, safe conflict handling, and system-level backup control—all done transparently with minimal user input.
 
 
-## 🎯 Purpose
+## Purpose
 
 Over time, folders like *Downloads*, *Documents*, or *Shared Drives* get cluttered with random files. Manually organizing them is tedious and error-prone. This project automates the task to:
 
@@ -14,9 +14,9 @@ Over time, folders like *Downloads*, *Documents*, or *Shared Drives* get clutter
 - Empower users with both file-level logs and database-level records.
 
 
-## 🛠️ How It Works
+## How It Works
 
-### 📁 File Categorization
+### File Categorization
 The Python script categorizes files into 5 main types:
 - `Documents` (`.doc`, `.docx`)
 - `Images` (`.jpg`, `.jpeg`, `.png`, `.bmp`, `.gif`)
@@ -26,10 +26,10 @@ The Python script categorizes files into 5 main types:
 
 Each file is moved into a subfolder like `Images/2023/` based on its last modified year.
 
-### 🔀 Conflict Handling
+### Conflict Handling
 If a file with the same name already exists in the destination, it is **renamed with a suffix** (e.g., `file(1).pdf`) to avoid overwriting.
 
-### 🗃️ Database Logging
+### Database Logging
 Every move is logged into a local SQLite database (`file_organization.db`) with the following fields:
 - Filename
 - File Type
@@ -39,19 +39,19 @@ Every move is logged into a local SQLite database (`file_organization.db`) with 
 
 This allows future querying or reporting.
 
-### 📜 Log File
+### Log File
 A human-readable log (`file_organization.log`) is maintained, which appends timestamps for each folder deletion in the format:
-### 🧹 Folder Deletion
+### Folder Deletion
 You’ll be prompted whether you want to **delete original folders** after organizing. Only folders that existed before the sort are considered, protecting important system folders.
 
-### 🔐 Safe Bash Backups
+###  Safe Bash Backups
 A Bash wrapper script:
 - Backs up the target directory before making changes.
 - Calls the Python script.
 - Appends log entries with real system time.
 - Optionally deletes the backup if everything succeeds.
 
-## 🧰 Requirements
+##  Requirements
 
 - Python 3.7+
 - SQLite3 (bundled with Python)
@@ -63,7 +63,7 @@ A Bash wrapper script:
 
 The `file_organizer` Bash script automates the entire process of organizing files, handling subdirectory deletion, and tracking logs/database entries.
 
-### ✅ To use the script:
+###  To use the script:
 
 **Execute the Bash script** with one or more folder paths as arguments:
 
