@@ -105,7 +105,7 @@ def main():
             except Exception as e:
                 with open("file_organization.log", "a") as f:
                     timestamp = datetime.datetime.now().astimezone().strftime("%a %b %e %H:%M:%S %Z %Y")
-                    f.write(f"{timestamp} - Failed to delete {dir_path}: {e}\n")    
+                    f.write(f"{timestamp} - Fail to delete {dir_path}: {e}\n")    
     db_connection.close()
 
 if __name__ == "__main__":
